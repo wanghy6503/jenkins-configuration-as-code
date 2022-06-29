@@ -7,13 +7,13 @@ jenkins:
         value: "/path/to/somewhere"
       - key: AWS_REGION
         value: us-west-2
-  tool:
-    jdk:
-      installations:
-        - name: jdk11
-          home: "/jdk"
-          properties:
-            - installSource:
-                installers:
-                  - adoptOpenJdkInstaller:
-                      id: "jdk-11.0.14+9"
+tool:
+  jdk:
+    installations:
+      - name: jdk11
+        home: "/jdk"
+        properties:
+          - installSource:
+              installers:
+                - adoptOpenJdkInstaller:
+                    id: "jdk-11.0.14+9"
