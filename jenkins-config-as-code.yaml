@@ -1,0 +1,28 @@
+jenkins:
+  systemMessage: "Jenkins instance using Configuration as Code."
+  globalNodeProperties:
+  - envVars:
+      env:
+      - key: SOME_ENV_PATH
+        value: "/path/to/somewhere"
+      - key: AWS_REGION
+        value: us-west-2
+  tool:
+  jdk:
+    installations:
+      - name: jdk11
+        home: "/jdk"
+        properties:
+          - installSource:
+              installers:
+                - adoptOpenJdkInstaller:
+                    id: "jdk-11.0.14+9"
+  maven:
+    installations:
+      - name: maven3
+        home: "/maven3"
+        properties:
+          - installSource:
+              installers:
+                - maven:
+                    id: "3.8.4"
